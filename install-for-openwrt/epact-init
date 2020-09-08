@@ -1,0 +1,14 @@
+#!/bin/sh /etc/rc.common
+START=99
+user=18000000000
+pwd=123456
+start(){
+	epact $user $pwd start &
+}
+stop(){
+	killall epact
+}
+restart(){
+	stop
+	start
+}
